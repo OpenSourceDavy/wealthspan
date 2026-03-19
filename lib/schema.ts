@@ -12,7 +12,7 @@ export const basicInfoSchema = z.object({
   }),
   retireAge: z
     .number({ error: "请填写退休年龄" })
-    .min(50, "退休年龄不能小于50")
+    .min(30, "退休年龄不能小于30")
     .max(70, "退休年龄不能大于70"),
   lifeExpectancy: z
     .number({ error: "请填写预期寿命" })
