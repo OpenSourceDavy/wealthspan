@@ -16,7 +16,7 @@ const genderOptions = [
 
 const cityTiers = [
   { value: "tier1", label: "一线城市", desc: "北京、上海、广州、深圳" },
-  { value: "newTier1", label: "新一线城市", desc: "杭州、成都、武汉、南京等" },
+  { value: "newTier1", label: "新一线城市", desc: "杭州、成都、武汉、南京" },
   { value: "tier2", label: "二线城市", desc: "省会及经济发达地级市" },
   { value: "tier3", label: "三线及以下", desc: "其他城市" },
 ] as const;
@@ -57,11 +57,18 @@ export default function BasicInfoStep() {
           value={watch("cityTier")}
           onValueChange={(v) => setValue("cityTier", v as FormData["cityTier"], { shouldValidate: true })}
         >
-          <SelectTrigger><SelectValue placeholder="请选择" /></SelectTrigger>
+          <SelectTrigger>
+            <SelectValue placeholder="请选择">
+              {cityTiers.find((c) => c.value === watch("cityTier"))?.label}
+            </SelectValue>
+          </SelectTrigger>
           <SelectContent>
             {cityTiers.map((c) => (
               <SelectItem key={c.value} value={c.value}>
-                {c.label} — {c.desc}
+                <div className="flex flex-col py-0.5">
+                  <span className="font-medium">{c.label}</span>
+                  <span className="text-xs text-muted-foreground">{c.desc}</span>
+                </div>
               </SelectItem>
             ))}
           </SelectContent>
