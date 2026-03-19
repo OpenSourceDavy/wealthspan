@@ -47,7 +47,7 @@ export default function RootLayout({
         <footer className="border-t py-6 text-center text-xs text-muted-foreground">
           <div className="mx-auto max-w-5xl px-4">
             WealthSpan &copy; {new Date().getFullYear()} &mdash;
-            终身财富与养老精算工具，结果仅供参考
+            添加微信iisihe交流青年的职业、理财、养老
           </div>
         </footer>
       </body>
