@@ -118,10 +118,12 @@ export default function ResultPage() {
       {/* Header */}
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">财富与养老分析报告</h1>
-          <p className="mt-1 text-sm text-muted-foreground">
-            基于您的输入，以下是精算结果
-          </p>
+        <h1 className="text-2xl font-bold">
+  您预计在 <span className="text-primary">{formData.retireAge}</span> 岁退休的报告如下：
+</h1>
+<p className="mt-1 text-sm text-muted-foreground">
+  基于您的输入（当前 {formData.age} 岁），以下是精算结果
+</p>
         </div>
         <div className="flex gap-2">
           <Button variant="outline" size="sm" onClick={handleCopy}>复制摘要</Button>
