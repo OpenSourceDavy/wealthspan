@@ -24,8 +24,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx next build
-      - run: echo "www.tuixiu.live" > out/CNAME
-
+      - run: echo "tuixiu.live" > out/CNAME
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
