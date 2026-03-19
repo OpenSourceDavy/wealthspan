@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,15 +31,15 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-sm">
           <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
-            <a href="/" className="flex items-center gap-2 font-semibold text-lg tracking-tight">
+            <Link href="/" className="flex items-center gap-2 font-semibold text-lg tracking-tight">
               <span className="inline-block size-7 rounded-lg bg-primary text-primary-foreground text-center leading-7 text-sm font-bold">
                 W$
               </span>
               WealthSpan
-            </a>
+            </Link>
             <nav className="flex items-center gap-4 text-sm text-muted-foreground">
-              <a href="/" className="hover:text-foreground transition-colors">首页</a>
-              <a href="/assess" className="hover:text-foreground transition-colors">开始计算</a>
+              <Link href="/" className="hover:text-foreground transition-colors">首页</Link>
+              <Link href="/assess" className="hover:text-foreground transition-colors">开始计算</Link>
             </nav>
           </div>
         </header>
