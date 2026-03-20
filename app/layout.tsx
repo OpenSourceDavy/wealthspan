@@ -47,7 +47,7 @@ export default function RootLayout({
         <footer className="border-t py-6 text-center text-xs text-muted-foreground">
           <div className="mx-auto max-w-5xl px-4">
             WealthSpan &copy; {new Date().getFullYear()} &mdash;
-            添加微信iisihe交流青年的职业、理财、养老
+            抖音关注退休实验室交流青年的职业、理财、养老
           </div>
         </footer>
       </body>
